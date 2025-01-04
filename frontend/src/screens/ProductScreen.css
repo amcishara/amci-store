@@ -1,0 +1,147 @@
+.image-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail-image {
+  max-height: 500px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-info .list-group-item {
+  padding: 15px;
+  border-color: #eee;
+}
+
+.order-card {
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.order-card .list-group {
+  height: auto;
+}
+
+.order-card .list-group-item {
+  padding: 15px;
+  border-color: #eee;
+}
+
+.order-card .list-group-item:first-child {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.order-card .list-group-item:last-child {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.d-grid.gap-2 {
+  padding: 0.5rem 0;
+}
+
+.additional-info {
+  border-radius: 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.additional-info .list-group {
+  height: auto;
+}
+
+.additional-info .list-group-item {
+  padding: 12px 15px;
+  border-color: #eee;
+}
+
+.additional-info .list-group-item:first-child {
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.additional-info .list-group-item:last-child {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.features-list {
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  list-style-type: disc;
+}
+
+.features-list li {
+  margin-bottom: 8px;
+  color: #666;
+  padding-left: 5px;
+}
+
+.features-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Button styling */
+.btn-block {
+  background: #2c3e50;
+  border: none;
+  padding: 12px;
+  transition: all 0.3s ease;
+}
+
+.btn-block:hover {
+  background: #34495e;
+  transform: translateY(-2px);
+}
+
+/* Status badges */
+.text-success {
+  background: #e8f5e9;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.text-danger {
+  background: #ffebee;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+/* Back button */
+.btn-light {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background: #f8f9fa;
+  transform: translateX(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .product-detail-image {
+    max-height: 300px;
+  }
+  
+  .order-card {
+    margin-top: 20px;
+  }
+}
+
+/* Add margin to the bottom of the main container */
+.product-container {
+  margin-bottom: 4rem;
+}

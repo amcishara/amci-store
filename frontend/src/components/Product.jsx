@@ -2,10 +2,11 @@ import React from 'react'
 import { Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Rating from './Rating'
+import './product.css'
 
 const Product = ({ product }) => {
   return (
-    <Card className="my-3 p-3 rounded h-100 shadow-sm hover-effect">
+    <Card className="my-3 p-3 rounded h-100 shadow-sm hover-effect" >
       <Link to={`/product/${product._id}`} className="text-decoration-none">
         <Card.Img 
           src={product.image} 

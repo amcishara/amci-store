@@ -2,12 +2,23 @@ import { useEffect, useState } from 'react';
 import { Row, Col, Alert } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
 import Product from '../components/Product';
-import products from '../products';
+import axios from "axios";
+
 
 const HomeScreen = () => {
+
+  const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [noProductsMessage, setNoProductsMessage] = useState('');
   const location = useLocation();
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const {data} = await axios.get("/api/products");
+      setProducts(data);
+    };
+    fetchProducts();
+  }, []);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -43,12 +54,14 @@ const HomeScreen = () => {
     if (filtered.length === 0) {
       const message = searchFilter
         ? `No products found matching "${searchFilter}"`
-        : `No products found in ${categoryFilter} category. We're working on adding more products!`;
+        : categoryFilter 
+          ? `No products found in ${categoryFilter} category. We're working on adding more products!`
+          : 'No products found';
       setNoProductsMessage(message);
     } else {
       setNoProductsMessage('');
     }
-  }, [location.search]);
+  }, [location.search, products]);
 
   // Function to get the correct heading text
   const getHeadingText = () => {

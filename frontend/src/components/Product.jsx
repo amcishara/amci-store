@@ -26,7 +26,7 @@ const Product = ({ product }) => {
           </div>
 
           <Card.Text as="h3" className="text-primary mb-0 mt-auto">
-            ${product.price.toFixed(2)}
+            ${product && product.price ? product.price.toFixed(2) : '0.00'}
           </Card.Text>
         </Card.Body>
       </Link>

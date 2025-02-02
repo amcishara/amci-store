@@ -3,12 +3,21 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center the image */
 }
 
 .product-detail-image {
   max-height: 500px;
   object-fit: contain;
   width: 100%;
+  border: 1px solid #ddd; /* Add a border */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.product-detail-image:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
 }
 
 .product-info .list-group-item {
@@ -17,7 +26,7 @@
 }
 
 .order-card {
-  border-radius: 50px;
+  border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   height: auto;
   margin-bottom: 1rem;
@@ -40,6 +49,20 @@
 .order-card .list-group-item:last-child {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+.specifications-card {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1rem;
+}
+
+.specifications-card .list-group-item {
+  padding: 15px;
+  border-color: #eee;
 }
 
 .d-grid.gap-2 {
@@ -95,6 +118,7 @@
   border: none;
   padding: 12px;
   transition: all 0.3s ease;
+  width: 100%;
 }
 
 .btn-block:hover {
@@ -144,4 +168,16 @@
 /* Add margin to the bottom of the main container */
 .product-container {
   margin-bottom: 4rem;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+main {
+  padding-bottom: 2rem; /* Add padding to the bottom to prevent overlap with footer */
 }
